@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Website Colorizer",
+  "version": "1.0.1",
+  "author": "Michal Vašíček",
+  "description": "Make your websites happier.",
+  "background": {
+    "scripts": ["src/js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/js/content-script.js"
+      ]
+    }
+  ],
+  "page_action": {
+    "browser_style": true,
+    "default_icon": {
+      "19": "src/img/btn-19.png",
+      "38": "src/img/btn-38.png"
+    },
+    "default_title": "Colorize"
+  }
+}
