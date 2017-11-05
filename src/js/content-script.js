@@ -17,7 +17,7 @@ browser.runtime.onMessage.addListener(function (message) {
             const els = document.querySelectorAll("body *");
             interval = setInterval(() => {
                 let el = els[Math.floor(Math.random() * els.length)];
-                el.style.background = getRandomColor();
+                el.style.backgroundColor = getRandomColor();
                 el.style.color = getRandomColor();
             }, 1);
         } else {
