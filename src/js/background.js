@@ -1,9 +1,9 @@
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (changeInfo.status === 'complete') {
-        browser.pageAction.show(tabId);
+        chrome.pageAction.show(tabId);
     }
 });
 
-browser.pageAction.onClicked.addListener(function(tab) {
-    browser.tabs.sendMessage(tab.id, 'colorize');
+chrome.pageAction.onClicked.addListener(function(tab) {
+    chrome.tabs.sendMessage(tab.id, 'colorize');
 });

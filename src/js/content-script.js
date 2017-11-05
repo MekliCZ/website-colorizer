@@ -10,7 +10,7 @@ function getRandomColor() {
     return color;
 }
 
-browser.runtime.onMessage.addListener(function (message) {
+chrome.runtime.onMessage.addListener(function (message) {
     if (message === 'colorize') {
         if (running === false) {
             running = true;
